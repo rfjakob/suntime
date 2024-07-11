@@ -8,9 +8,7 @@ TO_RAD = math.pi/180.0
 
 
 class SunTimeException(Exception):
-
-    def __init__(self, message):
-        super(SunTimeException, self).__init__(message)
+    pass
 
 
 class Sun:

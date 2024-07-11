@@ -92,12 +92,12 @@ class TestNoSun(unittest.TestCase):
 
     def test_get_sunrise_time(self):
         # Test for no sunrise
-        with self.assertRaises(SunTimeException):
+        with self.assertRaisesRegex(SunTimeException, 'The sun'):
             self.sun.get_sunrise_time(datetime(2024, 12, 21))  # Winter solstice in the northern hemisphere
 
     def test_get_sunset_time(self):
         # Test for no sunset
-        with self.assertRaises(SunTimeException):
+        with self.assertRaisesRegex(SunTimeException, 'The sun'):
             self.sun.get_sunset_time(datetime(2024, 6, 21))  # Summer solstice in the northern hemisphere
 
 
